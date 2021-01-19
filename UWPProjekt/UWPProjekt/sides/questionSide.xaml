@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="UWPProjekt.sides.questionSide"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPProjekt.sides"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel Orientation="Horizontal" Background="#ECEAF5">
+            <StackPanel HorizontalAlignment="Center" Height="700" Width="1000" Background="#ECEAF5">
+                <TextBlock Name="helloHelp" Text="Witaj na stronie pomocy"  FontSize="60" FontFamily="tahoma" FontWeight="Bold" Foreground="#3E6B79" Margin="15,20,0,10"/>
+                <TextBlock Name="helpCom" Text="Tutaj uzyszkasz wszystkie informacje odnośnie tego programu. Są tutaj opisane wszystkie możliwosci programu." HorizontalAlignment="Center" FontSize="30" FontFamily="tahoma" FontWeight="Bold" Foreground="#3E6B79" Margin="50,20,50,50" TextWrapping="Wrap" TextAlignment="Center"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20">
+                    <TextBlock Name="firstInfoButton" Text="Powrót do okna głównego programu dokonywany jest przez przycisk domowy: " HorizontalAlignment="Center" FontSize="20" FontFamily="tahoma" FontWeight="Bold" Foreground="#3E6B79" TextWrapping="Wrap" TextAlignment="Center" Margin="0,0,30,0" Width="800"/>
+                    <Image Name="firstIcoknButton" Source="/Assets/ikonsInfo/houseInfo.png" Width="50" Height="50" Stretch="Uniform" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20">
+                    <TextBlock Name="secondInfoButton" Text="Aby udać się do okna związanego z walutami należy znaleść przycisk :" HorizontalAlignment="Center" FontSize="20" FontFamily="tahoma" FontWeight="Bold" Foreground="#3E6B79" TextWrapping="Wrap" TextAlignment="Center"  Margin="0,0,30,0" Width="800"/>
+                    <Image Name="socondIcoknButton" Source="/Assets/ikonsInfo/moneyInfo.png" Width="50" Height="50" Stretch="Uniform" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20">
+                    <TextBlock Name="thirdInfoButton" Text="Aby udać się do okna z kursem walut należy znaleść przycisk o wyglądzie :" HorizontalAlignment="Center" FontSize="20" FontFamily="tahoma" FontWeight="Bold" Foreground="#3E6B79" TextWrapping="Wrap" TextAlignment="Center"  Margin="0,0,30,0" Width="800"/>
+                    <Image Name="thirdIcoknButton" Source="/Assets/ikonsInfo/exchangeInfo.png" Width="50" Height="50" Stretch="Uniform" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="20">
+                    <TextBlock Name="fourthInfoButton" Text="Sekcja z podręcznym notatnikiem oraz kalendarzem znajdziesz przy pomocy :" HorizontalAlignment="Center" FontSize="20" FontFamily="tahoma" FontWeight="Bold" Foreground="#3E6B79" TextWrapping="Wrap" TextAlignment="Center"  Margin="0,0,30,0" Width="800"/>
+                    <Image Name="fourthIcoknButton" Source="/Assets/ikonsInfo/notebookInfo.png" Width="50" Height="50" Stretch="Uniform" />
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,49 @@
+﻿<Page
+    x:Class="UWPProjekt.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPProjekt"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Background="#73E2B5" BorderBrush="#080522" BorderThickness="2">
+        <StackPanel Orientation="Horizontal" Height="50" Background="#120D36">
+            <Image Name="logo" Height="65" Width="95" Margin="0,-6,50,-9" Source="/Assets/logo/logo.png" Stretch="Uniform" Tapped="Logo_Tapped"/>
+            <StackPanel HorizontalAlignment="Stretch" Height="50" Margin="0,0,0,0" VerticalAlignment="Top" >
+                <Button Style="{StaticResource ButtonStyleGlowne}" Name="home" Margin="20,0,40,0" Height="45" Width="80" Tapped="Home_Tapped" Background="#120D36"/>
+                <RelativePanel Name="blockPanelHo" Width="80" Height="5" Margin="20,0,40,0" Background="#ECEAF5"/>
+            </StackPanel>
+            <StackPanel >
+                <StackPanel.Background>
+                    <ImageBrush/>
+                </StackPanel.Background>
+                <Button Style="{StaticResource ButtonStyleGlowne}" Name="cash" Margin="20,0,40,0" Height="45" Width="80" Tapped="Cash_Tapped" Background="#120D36"/>
+                <RelativePanel Name="blockPanelCH" Width="80" Height="5" Background="#ECEAF5" Margin="20,0,40,0" Visibility="Collapsed" />
+            </StackPanel>
+            <StackPanel>
+                <Button Style="{StaticResource ButtonStyleGlowne}" Name="exchange" Margin="20,0,40,0" Height="45" Width="80" Tapped="Exchange_Tapped" Background="#120D36"/>
+                <RelativePanel Name="blockPanelEx" Width="80" Height="5" Background="#ECEAF5" Margin="20,0,40,0" Visibility="Collapsed"/>
+            </StackPanel>
+            <StackPanel>
+                <Button Style="{StaticResource ButtonStyleGlowne}" Name="notebook" Margin="20,0,40,0" Height="45" Width="80" Tapped="Notebook_Tapped" Background="#120D36"/>
+                <RelativePanel Name="blockPanelNo" Width="80" Height="5" Background="#ECEAF5" Margin="20,0,40,0" Visibility="Collapsed"/>
+            </StackPanel>
+            <StackPanel>
+                <Button Style="{StaticResource ButtonStyleGlowne}" Name="question" Margin="20,0,40,0" Height="45" Width="80" Tapped="Question_Tapped" Background="#120D36"/>
+                <RelativePanel Name="blockPanelQu" Width="80" Height="5" Background="#ECEAF5" Margin="20,0,40,0" Visibility="Collapsed"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel>
+            <RelativePanel Height="5" Background="#120d36" Margin="0,0,0,0"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" >
+            <Frame Name="ScreenView" Height="630" Width="1280" Background="#ECEAF5"/>
+        </StackPanel>
+        <StackPanel  Background="#120D36" Height="42" Margin="0,0,0,0">
+            <TextBlock Name="info" Text="Stworzone prze Paweł Rogiewicz i Grzegorz Krzyżański" HorizontalAlignment="Right" Margin="5" Foreground="#ECEAF5" FontFamily="tahoma"/>
+        </StackPanel>
+    </StackPanel>
+
+</Page>

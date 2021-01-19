@@ -1,0 +1,37 @@
+﻿<Page Width="1280" Height="630"
+    x:Class="UWPProjekt.sides.noteSide"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPProjekt.sides"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Height="630" Width="1100" Background="#ECEAF5">
+                <CalendarView Name="calendarNote" Width="1000" Height="300" Margin="50,10,50,10" BorderThickness="3"
+                              BorderBrush="#120D36" Background="#DDDDE3" Foreground="#3E6B79" TodayForeground="#ECEAF5" CalendarItemBackground="#DDDDE3"  CalendarItemForeground="#120D36"  OutOfScopeForeground="#3E6B79" OutOfScopeBackground="#F9F9F9" 
+                              FontFamily="Arial Black" TodayFontWeight="Bold"  DayItemFontSize="19" Language="PL"/>
+
+                <TextBlock Name="contentNoteInfo" Text="Zawartość: " FontSize="30" FontFamily="Arial Black" FontWeight="Bold" Foreground="#3E6B79" Margin="30,10,0,0"/>
+                <TextBox Style="{StaticResource TextBoxStyleNowy}" Name="contentNoteTextBlock" Width="950" Height="239" FontFamily="Arial Black" FontSize="15" FontWeight="Bold" BorderBrush="#120D36" Margin="75,0,75,0" Background="#DDDDE3" Foreground="#3E6B79" TextWrapping="Wrap"/>
+            </StackPanel>
+            <StackPanel Height="630" Width="180" Background="#120D36">
+                <TextBlock Name="titleMainInfoNote" Height="45"  Margin="0,40,0,0" Text="Pomocne" HorizontalAlignment="Center" FontSize="40" FontFamily="Algerian" Foreground="#ECEAF5"/>
+                <TextBlock Name="titleInfoNote" Height="30" Margin="0,15,0,20" HorizontalAlignment="Center" Text="menu" FontSize="25" FontFamily="Algerian" Foreground="#ECEAF5"/>
+                <Image Name="imageNote" Height="35" Margin="0,10,0,10" />
+                <StackPanel Orientation="Horizontal">
+                    <RelativePanel Name="savePointNote" Width="5" Height="65" Background="#ECEAF5"/>
+                    <Button  Name="saveNoteButton" Width="175" Margin="0,15,0,15" Height="65" Content="Zapisz" FontSize="15" HorizontalAlignment="Center" FontFamily="Broadway" Foreground="#ECEAF5" Background="#120D36" BorderBrush="#ECEAF5" Tapped="SaveNoteButton_Tapped"/>
+                </StackPanel>
+             
+                <StackPanel Orientation="Horizontal">
+                    <RelativePanel Width="5" Height="65" Background="#ECEAF5"/>
+                    <Button  Name="openTextFile" Width="175" Margin="0,15,0,15" Height="65" Content="Odczyt" FontSize="15" HorizontalAlignment="Center" FontFamily="Broadway" Foreground="#ECEAF5" Background="#120D36" BorderBrush="#ECEAF5" Tapped="OpenTextFile_Tapped"/>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,33 @@
+﻿<Page  Width="1100" Height="630"
+    x:Class="UWPProjekt.sides.GraphCashSide"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPProjekt.sides"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+          xmlns:Charting="using:WinRTXamlToolkit.Controls.DataVisualization.Charting"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel Background="#ECEAF5">
+            <TextBlock Name="graphTittle" Text="Zestawienie siedmiu dni" HorizontalAlignment="Center" Margin="0,50,0,20" FontSize="40" Foreground="#3E6B79" FontFamily="Arial Black" FontWeight="Bold"/>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel HorizontalAlignment="Left" Width="250" Height="90">
+                    <TextBlock Name="forCurrencyInfo" Text="z waluty :"  Foreground="#3E6B79" FontFamily="Arial Black" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center"/>
+                    <ComboBox Name="forCurrencyList" Width="190" Height="40" Foreground="#3E6B79" FontFamily="Arial Black" FontWeight="Bold" FontSize="20" HorizontalContentAlignment="Center" HorizontalAlignment="Center" SelectionChanged="ForCurrencyList_SelectionChanged" />
+
+
+                </StackPanel>
+                <StackPanel Name="emptySpaceCash" Width="600" HorizontalAlignment="Center"/>
+
+            </StackPanel>
+            <Charting:Chart Name="column" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 -40 40 0"
+                         Width="800" Height="407">
+                <Charting:ColumnSeries Title="Publikacja1-Ostatnia publikacja wartości" Margin="0,0,-207,0"
+                                   IndependentValuePath="name" DependentValuePath="Amount"
+                                   IsSelectionEnabled="True" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            </Charting:Chart>
+        </StackPanel>
+    </Grid>
+</Page>

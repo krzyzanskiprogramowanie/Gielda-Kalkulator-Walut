@@ -1,0 +1,24 @@
+﻿<Page Width="1100" Height="630"
+    x:Class="UWPProjekt.sides.YourCurrencyList"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPProjekt.sides"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="#ECEAF5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions >
+        <StackPanel Grid.Row="0">
+            <TextBlock Name="titelHelp" Text="Historia zapisanych kursów" Style="{ThemeResource HeaderTextBlockStyle}" FontWeight="Bold" Foreground="#3E6B79" Margin="20"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" Orientation="Horizontal">
+            <ListBox Width="500" Name="historyRate" Background="#ECEAF5" Foreground="#3E6B79" FontFamily="Arial Black" FontSize="25" Height="480" Margin="10" BorderBrush="#120D36" BorderThickness="2" />
+            <Button Style="{StaticResource ZapiszKurs}" Name="ClearTable" Width="230" Height="50" Margin="40,0,0,0" Content="Wyczyść Hisotrie" Foreground="#ECEAF5" FontFamily="Arial Black" FontWeight="Bold" FontSize="25" Background="#3E6B79" Tapped="Clear_History"/>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,35 @@
+﻿<Page  Width="1280" Height="630"
+    x:Class="UWPProjekt.sides.exchangeSide"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWPProjekt.sides"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+
+        xmlns:Charting="using:WinRTXamlToolkit.Controls.DataVisualization.Charting"
+    mc:Ignorable="d"
+       
+ 
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="#ECEAF5">
+        
+        <StackPanel  Height="630" Width="1280" HorizontalAlignment="Left">
+            <StackPanel Grid.Row="0" Orientation="Vertical" Margin="20" Background="#ECEAF5">
+                <TextBlock HorizontalAlignment="Center" Text="Giełda" Style="{ThemeResource HeaderTextBlockStyle}" Foreground="#3E6B79" FontFamily="Arial Black" FontWeight="Bold"/>
+            </StackPanel>
+            <StackPanel Height="530" Width="1280" >
+                
+                    <Charting:Chart Name="column" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="185,100,0,0"
+                         Width="900" Height="435">
+                        <Charting:ColumnSeries Title="Kursy Giełdy" Margin="0"
+                                   IndependentValuePath="name" DependentValuePath="Amount"
+                                   IsSelectionEnabled="True"/>
+                    </Charting:Chart>
+                
+
+            </StackPanel>
+          
+        </StackPanel>
+    </Grid>
+</Page>
